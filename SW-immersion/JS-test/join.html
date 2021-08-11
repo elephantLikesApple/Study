@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>클론코딩(제주맥주)</title>
+</head>
+<body>
+    <header>
+        <div id="title_logo">제주맥주</div>
+        <div id="user">
+            <ul>
+                <li><a href="./login.html">LOGIN</a></li>
+                <li><a href="./join_agree.html">JOIN</a></li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <div class="nav_1">
+            <a href="#"><img src="./img/share.png" width="50" alt="페이지 공유"></a>
+        </div>
+        <div class="nav_2">
+            <a href="#"><img src="./img/up.png" width="50" alt="상단으로 이동"></a>
+        </div>
+    </aside>
+    <nav>
+        <ul>
+            <li><a href="./index.html">EVENT</a></li>
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="./about_us.html">ABOUT US</a></li>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>JOIN</h1>
+        <p>안녕하세요 제주맥주입니다.</p>
+        <div class="join">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div>
+                    <input id="profile_img" name="profile_img" type="file" placeholder="">
+                </div>
+                <div class="lumpy">
+                    <input id="email" name="email" type="email" placeholder="이메일" required><br>
+                    <input id="pw" name="pw" type="password" placeholder="비밀번호" required><br>
+                    <input id="pw_chk" type="password" placeholder="비밀번호 확인" required>
+                </div>
+                <div class="text_left">
+                    <label for="username" class="necessary">이름</label><br>
+                    <input id="username" name="username" type="text" placeholder="이름을 입력하세요" required>
+                </div>
+                <div class="text_left">
+                    <label class="necessary">성별</label><br>
+                    <input id="man" name="sex" type="radio" value="male" checked>
+                    <label for="man">남자</label><br>
+                    <input id="woman" name="sex" type="radio" value="female">
+                    <label for="woman">여자</label>
+                </div>
+                <div class="text_left">
+                    <label for="phone" class="necessary">연락처</label><br>
+                    <input id="phone" name="phone" type="tel" placeholder="연락처" required>
+                </div>
+                <div class="text_left lumpy">
+                    <label for="adress1" class="necessary">주소</label><br>
+                    <input id="adress1" name="adress1" type="text" placeholder="주소" required><br>
+                    <input id="adress2" name="adress2" type="text" placeholder="상세주소">
+                </div>
+                <div class="text_left">
+                    <label class="necessary">생년월일</label><br>
+                    <select class="birth year">
+                        <script>
+                            var yOption = "";
+                            for(let i=2021; i>=1900; i--){
+                                yOption += "<option value='"+i+"'>"+i+"</option>";
+                            }
+                            document.write(yOption);
+                        </script>
+                    </select>
+                    <select class="birth month">
+                        <script>
+                            var mOption = "";
+                            for(let i=1; i<=12; i++){
+                                mOption += "<option value='"+i+"'>"+i+"</option>";
+                            }
+                            document.write(mOption);
+                        </script>
+                    </select>
+                    <select class="birth day">
+                        <script>
+                            var dOption = "";
+                            for(let i=1; i<=31; i++){
+                                dOption += "<option value='"+i+"'>"+i+"</option>";
+                            }
+                            document.write(dOption);
+                        </script>
+                    </select>
+                </div>
+                <div>
+                    <input id="agree_terms" name="agree_terms" type="hidden">
+                    <input id="agree_privacy" name="agree_privacy" type="hidden">
+                    <input id="marketing_sms_agree" name="marketing_sms_agree" type="hidden">
+                    <input id="marketing_email_agree" name="marketing_email_agree" type="hidden">
+                    <button type="button" onclick="formValidator()">가입하기</button>
+                    <script>
+                        let formValidator = function() {
+                            let email = document.getElementById("email").value;
+                            let pass = document.getElementById("pw").value;
+                            let pass_ck = document.getElementById("pw_chk").value;
+                            let phone = document.getElementById("phone").value;
+                            
+                            const regExp_mail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]+$/i;
+                            const regExp_tel = /^\d+$/g;
+
+                            if(!regExp_mail.test(email)) {
+                                alert("회원가입을 위해 이메일 형식을 지켜야 합니다.");
+                                return;
+                            }
+                            
+                            if(pass !== pass_ck) {
+                                alert("비밀번호가 일치하지 않습니다.");
+                                return;
+                            }
+
+                            if(!regExp_tel.test(phone)) {
+                                alert("연락처는 숫자만 입력해 주세요.<br> (예: 01012345678)");
+                                return;
+                            }
+
+                            location.href="./login.html";
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <span>
+            제주맥주 주식회사&nbsp;&nbsp;&nbsp;&nbsp;대표이사 XXX<br>
+            본사) 본사 주소&nbsp;&nbsp;&nbsp;&nbsp;서울사무실) 서울 주소<br>
+            호스팅 제공자 XXX&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 xxx-xx-xxxxx&nbsp;&nbsp;&nbsp;&nbsp;통신판매업신고번호 제 xxxx-xxxx-xxxx호<br>
+            개인정보보호책임자 XXX&nbsp;&nbsp;&nbsp;&nbsp;고객센터 xx-xxxx-xxxx, xxxx@xxxx.co.kr<br><br>
+            
+            <span>
+                COPYRIGHT 2021&commat; JEJU BEER COMPANY
+            </span>
+        </span>
+    </footer>
+</body>
+</html>

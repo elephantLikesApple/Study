@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div { border: 1px solid #222; }
+        #container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        #box1, #box2, #box3 {
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: justify;
+        }
+        #box1 {
+            top: 60px;
+            left: 25px;
+            width: 250px;
+            position: absolute;
+        }
+        #box2 {
+            top: 150px;
+            right: 50px;
+            width: 200px;
+            position: fixed;
+        }
+        #box3 {
+            left: 100px;
+            bottom: 50px;
+            width: 400px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">
+            box1<br>
+            우선 보급캠프 혹은 보급선을 만들어야 한다. 보급캠프는 조합대에서 상자 5개를 U자 모양으로 배치하면 되고, 보급선은 어느 종류 목재든 보트 5개를 같은 식으로 배치하면 된다.
+        </div>
+        <div id="box2">
+            box2<br>
+            마을은 무제한 확장이 가능한 게 아니라 마을 회관을 중심으로 일정한 식민지 경계를 가지며, 이 범위는 기본적으로 4x4 청크 크기이다.
+        </div>
+        <div id="box3">
+            box3<br>
+            일단 마을 회관의 위치를 잡아서 생성한 후 마을 회관 블럭에서 메뉴를 통해 콜로니를 활성화 해야한다. 이렇게 활성화 된 콜로니에는 곧 주민이 4명까지 스폰된다.
+        </div>
+    </div>
+</body>
+</html>

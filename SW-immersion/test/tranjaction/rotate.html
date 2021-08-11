@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                float: left;
+                margin: 10px;
+                perspective: 100px;
+            }
+            .inner {
+                background-color: salmon;
+            }
+            #rotate_left:hover {transform: rotate(-40deg);}
+            #rotate_right:hover {transform: rotate(40deg);}
+            #rotate_z:hover {transform: rotateZ(40deg);}
+        </style>
+    </head>
+    <div class="box">
+        <img id="rotate_left" src="../img/tree.jpg">
+    </div>
+    <div class="box">
+        <img id="rotate_right" src="../img/tree.jpg">
+    </div>
+    <div>
+        <img id="rotate_z" src="../img/tree.jpg">
+    </div>
+</html>

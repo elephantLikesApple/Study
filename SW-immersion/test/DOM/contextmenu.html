@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const contextMenuHandler = (evt) => {
+                alert('우클릭 금지!!');
+                // 이벤트를 중단시키는 이벤트객체(evt) 메소드
+                evt.preventDefault();
+            }
+
+            document.addEventListener('contextmenu', contextMenuHandler);
+        </script>
+    </body>
+
+</html>

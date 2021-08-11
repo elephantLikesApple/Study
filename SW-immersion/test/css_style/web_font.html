@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 폰트 사용 - 직접 변환</title>
+    <style>
+        @font-face {
+            font-family: 'Ghanachocolate';
+            src: url('../font/ghanachoco.woff') format('woff'),
+                url('../font/ghanachoco.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        body {
+            font-family: "Ghanachocolate";
+            font-size: 20px;
+        }
+        blockquote {
+            font-style: italic;
+            font-size: 80%;
+        }
+        .emphasis {
+            font-weight: 900;
+            font-size: 120%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>레드향</h1>
+        <p>껍질에 붉은 빛이 돌아 <b class="emphasis">레드향</b>이라 불린다.</p>
+        <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+        <blockquote>
+            <i>비타민 C</i>와 <i>비타민 P</i>가 풍부해 <br>
+            <strong class="emphasis">혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져있다.
+        </blockquote>
+    </main>
+</body>
+</html>

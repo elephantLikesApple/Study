@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = prompt("출생 년도를 입력하시오 (예: 2021)");
+        var result = "입력이 들어오지 않았습니다.";
+        switch(year%12) {
+            case 0:
+                result = "원숭이띠입니다.";
+                break;
+            case 1:
+                result = "닭띠입니다.";
+                break;
+            case 2:
+                result = "개띠입니다.";
+                break;
+            case 3:
+                result = "돼지띠입니다.";
+                break;
+            case 4:
+                result = "쥐띠입니다.";
+                break;
+            case 5:
+                result = "소띠입니다.";
+                break;
+            case 6:
+                result = "호랑이띠입니다.";
+                break;
+            case 7:
+                result = "토끼띠입니다.";
+                break;
+            case 8:
+                result = "용띠입니다.";
+                break;
+            case 9:
+                result = "뱀띠입니다.";
+                break;
+            case 10:
+                result = "말띠입니다.";
+                break;
+            case 11:
+                result = "양띠입니다.";
+                break;
+        }
+        document.write(result);
+    </script>
+</body>
+</html>

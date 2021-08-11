@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = 'Hello';
+
+        console.log(str.charAt(0));
+        console.log(str.charAt(1));
+        console.log(str.charAt(2));
+        console.log(str.charAt(3));
+        console.log(str.charAt(4));
+        console.log(str.charAt(5));
+
+        for (let i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        for (let i = 0 ; i<str.length; i++) {
+            console.log(str[i]);
+        }
+
+        const string = "hello world";
+        console.log(string.indexOf('world'));
+
+        if(string.indexOf(' ') != -1) {
+            console.log('공백은 입력할 수 없습니다.');
+        }
+
+        if(string.includes(' ')){
+            console.log("공백은 입력할 수 없습니다.");
+        }
+
+        const str2 = 'How are you doing?';
+
+        console.log(str2.replace(' ', '-')); // 처음 문자를 발견하면 해당 문자를 바꾸고 빠져나옴. // 정규표현식으로 해결
+
+        let strArr = str2.split(' ');
+        for(let i =0; i<strArr.length; i++) {
+            console.log(strArr[i]);
+        }
+    </script>
+</body>
+</html>

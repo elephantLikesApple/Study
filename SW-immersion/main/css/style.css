@@ -1,0 +1,556 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('../font/Gotham-Black.woff2') format('woff2'),
+        url('../font/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../font/Gotham-Bold.woff2') format('woff2'),
+        url('../font/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('../font/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+        url('../font/SpoqaHanSansNeo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('../font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+        url('../font/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.clear {
+    clear: both;
+}
+.text_left {
+    text-align: left;
+}
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+* {
+    font-family: 'Gotham', 'Spoqa Han Sans Neo';
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+header, nav {
+    width: 1000px;
+    height: 60px;
+    margin: auto;
+}
+
+header #title_logo {
+    color: #1ecad3;
+    padding-left: 10%;
+    font-size: 2.1em;
+    font-weight: bold;
+    width: 70%;
+    float: left;
+}
+
+header #user {
+    width: 20%;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 20px;
+}
+
+#user ul {
+    list-style: none;
+    text-align: right;
+}
+
+#user li { 
+    display: inline-block;
+    margin: 0px;
+    padding: 3px;
+    font-size: 0.8em;
+}
+
+aside {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 3;
+}
+
+.main_1000 {
+    width: 1000px;
+    margin: auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #1ecad3;
+}
+
+article, div {
+    text-align: center;
+}
+
+footer {
+    font-size: 0.7em;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+table {
+    margin: auto;
+    border-top: 2px solid #444;
+    border-bottom: 2px solid #444;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 500;
+    caption-side: initial;
+}
+
+th, td {
+    padding: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3em;
+    color: #1ecad3;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #1ecad3; 
+}
+
+
+.font_size_plus {
+    font-size: 1.5em;
+}
+
+.nav_1 {
+    background-color: rgba(30, 205, 214, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+}
+.nav_2 {
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+}
+
+
+/***************** index.html *****************/
+
+#event_video {
+    width:100%;
+}
+
+.event_list_text {
+    display: inline-block;
+    background-color: #1ecad3;
+    color: #fff;
+    width: 380px;
+    border-radius: 50px;
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.event_img {
+    position: relative;
+}
+
+.bg_img {
+    width: 100%;
+}
+
+.event_mes {
+    position: absolute;
+    left: 28%;
+    top: 12%;
+}
+
+.inner_img {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.event_grid {
+    position: relative;
+    margin: 0;
+}
+
+.event_grid_col {
+    display: inline-block;
+    width: 33%;
+}
+
+.event_grid_col img {
+    width: 100%;
+}
+
+.start_img {
+    width: 15%;
+    position: absolute;
+    left: 43%;
+    top:52%;
+    animation: updown 500ms alternate infinite;
+}
+@keyframes updown {
+    from {transform: translateY(0);}
+    to {transform: translateY(10px);}
+}
+
+.event_color {
+    background-color: #fcf9ef;
+    background-clip: border-box;
+}
+
+.event_bg {
+    background: url("../img/bg2.jpg") no-repeat left top;
+    height: 80px;
+}
+
+/**************** shop.html *****************/
+
+.product_space {
+    width: 50%;
+    float:left;
+    display: flex;
+    position: relative;
+}
+
+.product_space img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.product_en_title {
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    left: 55px;
+    top: 55px;
+}
+
+.product_ko_title {
+    text-align: left;
+    color: #fff;
+    font-size: 1.7em;
+    position: absolute;
+    left: 55px;
+    top: 80px;
+}
+
+.product_price {
+    text-align: left;
+    color: #fff;
+    font-size: 1.4em;
+    position: absolute;
+    left: 55px;
+    top: 165px;
+}
+
+/**************** shop_read.html *****************/
+
+
+.product_left {
+    float: left;
+    width: 50%;
+}
+
+.product_left img {
+    width: 100%;
+}
+
+.product_right {
+    float: right;
+    width: 45%;
+    text-align: left;
+    margin: 0 10px;
+    font-size: 1.4em;
+}
+
+.product_num {
+    font-size: 0.5em;
+    padding: 40px 0px 20px 0px;
+    background-color: #eee;
+}
+
+.product_right button {
+    margin: 15px 5px;
+    padding: 20px 30px;
+    width: 200px;
+    border-color: #1ecad3;
+    border-radius: 45px;  
+}
+
+.sky {
+    background-color: #1ecad3;
+    color: #fff;
+}
+
+.white{
+    background-color: #fff;
+    color: #1ecad3;
+}
+
+.product_detail {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+    font-size: 0.9em;
+}
+
+.product_detail img {
+    width: 100%;
+    margin: 5px;
+}
+
+.product_detail table {
+    width: 100%;
+    font-size: 1em;
+    margin: 10px;
+}
+
+.delevery {
+    border: 0px;
+    margin: 10px;
+}
+
+
+
+/**************** about_us.html *****************/
+
+.nav_button {
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.prom_img {
+    margin: 80px 0;
+}
+
+.awards {
+    float: left;
+    width: 50%;
+}
+
+.awards img {
+    width: 25%;
+    display: inline-block;
+}
+
+.awards div {
+    width: 73%;
+    display: inline-block;
+}
+
+.img_text {
+    position: absolute;
+    left: 38%;
+    top: 28%;
+    z-index: 2;
+}
+.container{
+    position: relative;
+}
+.img_text h2, .img_text p {
+    color: #fff;
+}
+
+.tmp {
+    height: 40px;
+}
+
+.about_grid_col {
+    display: inline-block;
+    width: 33%;
+}
+
+.about_grid_col.height1 {
+    position: relative;
+    top: -73px;
+}
+.about_grid_col.height2 {
+    position: relative;
+    top: -25px;
+}
+
+.logo_button {
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 35px;
+    font-size: 1.5em;;
+}
+
+
+/********************* news.html ********************/
+
+.text_small {
+    font-size: 1em;
+}
+
+.carousel_img {
+    width: 33.333%;
+}
+
+.slide {
+    overflow: hidden;
+}
+.slide div {
+    width: 300%;
+    display: flex;
+    animation: slider 6s infinite;
+}
+@keyframes slider {
+    0% {margin-left: 0%;}
+    16% {margin-left: 0%;}
+    33% {margin-left: -100%;}
+    49% {margin-left: -100%;}
+    66% {margin-left: -200%;}
+    82% {margin-left: -200%;}
+    100% {margin-left: 0%;}
+}
+
+.bottom_line {
+    border-bottom: 1px solid #555;
+}
+
+/****************** join_agree.html ******************/
+
+.join_width {
+    width: 400px;
+    margin: auto;
+}
+
+.text_small {
+    font-size: 0.8em;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+.join_width .necessary::after {
+    content: " (필수)";
+    color: red;
+}
+
+.join_width .additional::after {
+    content: " (선택)";
+    color: gray;
+}
+
+/****************** join.html ******************/
+
+.join {
+    width: 312px;
+    margin: auto;
+}
+.join .lumpy input{
+
+    margin: -1px 0px;
+}
+.join input:focus, .join select:focus {
+    outline-color: #1ecad3;
+    outline-width: 3px;
+}
+.join input[placeholder]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 300px;
+    padding: 10px;
+}
+.join .necessary::after {
+    content: " ·";
+    color: red;
+    font-weight: bold;
+}
+
+/****************** login.html ******************/
+
+.login {
+    width: 335px;
+    margin: auto;
+}
+.login input[placeholder] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: -1px 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.login button[type=submit] {
+    border-radius: 0px;
+    width: 320px;
+    border: none;
+    letter-spacing: 0.5em;
+    font-size: 1.2em;
+    background-color: #1ecad3;
+    color: white;
+    margin-left: 10px;
+}
+.login .text_left {
+    margin-left: 10px;
+}
+.login .blank_area {
+    width: 95px;
+    display: inline-block;
+}
+.login a {
+    text-decoration: underline;
+    margin-left: 6px;
+}

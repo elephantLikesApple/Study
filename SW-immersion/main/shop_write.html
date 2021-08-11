@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>클론코딩(제주맥주)</title>
+</head>
+<body>
+    <header>
+        <div id="title_logo">제주맥주</div>
+        <div id="user">
+            <ul>
+                <li><a href="./login.html">LOGIN</a></li>
+                <li><a href="./join_agree.html">JOIN</a></li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <div class="nav_1">
+            <a href="#"><img src="./img/share.png" width="50" alt="페이지 공유"></a>
+        </div>
+        <div class="nav_2">
+            <a href="#"><img src="./img/up.png" width="50" alt="상단으로 이동"></a>
+        </div>
+    </aside>
+    <nav>
+        <ul>
+            <li><a href="./index.html">EVENT</a></li>
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="./about_us.html">ABOUT US</a></li>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="POST" enctype="multipart/form-data">
+            <input name="thumnail" type="file"><br>
+            <label for="en_product_name">제품 영문 이름</label>
+            <input id="en_product_name" name="en_product_name" type="text" required><br>
+            <label for="ko_product_name">제품 한글 이름</label>
+            <input id="ko_product_name" name="ko_product_name" type="text" required><br>
+            <label for="price">가격</label>
+            <input id="price" name="price" type="number" value="0" step="1000"><br>
+            <textarea rows="10" cols="100">
+제품 설명 / 제품 이미지 / 상품정보-영양정보등을 입력해 주세요.
+</textarea><br>
+            <textarea rows="10" cols="100">
+배송안내
+전국택배배송 | CJ대한통운
+배송비   회원가입하면 상시 무료배송!
+         미가입 시 건당 3,000원
+배송기간 공휴일/일요일을 제외하고 결제일 기준 2-3일 소요
+</textarea><br>
+            <textarea rows="10" cols="100">
+교환 및 환불 안내
+ 제주맥주에서 구매하신 제품은 받으셨을 때와 동일한 상태로, 구매 후 7일 이내 교환/환불이 가능합니다.
+ 단순 변심으로 인한 교환 시 왕복 배송비 6천원, 환불 시 3천원을 청구합니다.
+ 오배송, 불량으로 인한 교환/환불 시 배송비 무료입니다.
+ 제품 배송 이후 환불 요청 시에는 제품 회수 후에 환불이 완료됩니다.
+ 자세한 사항은 고객센터 혹은 문의 게시판에 문의해주세요.
+</textarea><br>
+        <button type="submit" value="상품 등록하기">
+        </form>
+    </main>
+    <footer>
+        <span>
+            제주맥주 주식회사&nbsp;&nbsp;&nbsp;&nbsp;대표이사 XXX<br>
+            본사) 본사 주소&nbsp;&nbsp;&nbsp;&nbsp;서울사무실) 서울 주소<br>
+            호스팅 제공자 XXX&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 xxx-xx-xxxxx&nbsp;&nbsp;&nbsp;&nbsp;통신판매업신고번호 제 xxxx-xxxx-xxxx호<br>
+            개인정보보호책임자 XXX&nbsp;&nbsp;&nbsp;&nbsp;고객센터 xx-xxxx-xxxx, xxxx@xxxx.co.kr<br><br>
+            
+            <span>
+                COPYRIGHT 2021&commat; JEJU BEER COMPANY
+            </span>
+        </span>
+    </footer>
+</body>
+</html>

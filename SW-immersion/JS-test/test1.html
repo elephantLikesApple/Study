@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var apple = prompt("사과를 몇 개 구매하시겠습니까?");
+        var pear = prompt("배를 몇 개 구매하시겠습니까?");
+        var money = prompt("비용을 지불하세요.");
+        if (isNaN(apple) || isNaN(pear) || isNaN(money)) {
+            alert("숫자가 아닌 입력이 존재합니다.");
+        }
+        else {
+            var result = money - (apple*500) -(pear*600);
+
+            result = (result >= 0) ? ("거스름돈은 "+result+"원 입니다.") : ("비용이 모자랍니다.");
+
+            document.write(result);
+        }
+    </script>
+</body>
+</html>

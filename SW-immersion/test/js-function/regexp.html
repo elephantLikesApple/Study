@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="id" type="text" onkeyup="checkId(this);">
+    <div id="message1"></div>
+    <input name="pass" type="password" onkeyup="checkPass(this);">
+    <div id="message2"></div>
+
+    <script>
+        const checkId = function(obj) {
+            let message = document.getElementById("message1");
+            const regExp = /[A-Za-z0-9]+$/;
+
+            if(!regExp.test(obj.value)) {
+                message.innerText = "아이디는 영어와 숫자로만 작성할 수 있습니다.";
+            } else {
+                message.innerText = "";
+            }
+        }
+
+        const checkPass = function(obj) {
+            let message = document.getElementById("message2");
+            const regExp = /^.*(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+
+            console.log(regExp.exec(obj.value));
+
+            if(!regExp.test(obj.value)) {
+                message.innerText = "비밀번호는 영어와 숫자, 특수문자를 조합해야 합니다.";
+            } else {
+                message.innerText = "";
+            }
+        }
+    </script>
+</body>
+</html>
