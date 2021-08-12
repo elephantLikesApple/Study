@@ -70,6 +70,9 @@ apt-get install -y vim nano net-tools openssh-server
 # 맨 뒤에 uri 지정 (uri : http(스키마)를 포함한 전체 !요청 문장!)
 # 웹 브라우저 실행 없이 서버 구동을 확인할 수 있음
 # 파일 받을 때에는 curl 말고 wget을 많이 씀!!!
+# -d : 다중 파라미터 전송 (method : GET인 경우)
+# ㄴ> -d "key1=data1" -d "key2=data2"
+# ㄴ> -d "key1=data1 & key2=data2"
 
 # 도커 생성 + 실행 명령어
 # docker run --name db_mongo -d -p 27017:27017 -v D:\Study\work\database:/data/db mongo:latest
