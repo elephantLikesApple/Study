@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+        
+        var result;
+        result = a>b || b>=m || m>n; //false or false or false
+        document.write(result, "<br>");
+        
+        result = a>b || b>=m || m<=n; //false or false or true
+        document.write(result, "<br>");
+        
+        result = a<=b && b>=m && m<=n; //true and false and true
+        document.write(result, "<br>");
+        
+        result = a>b || b<=m || m>n; //true and true and true
+        document.write(result, "<br>");
+        
+        result = !(a>b); //!false
+        document.write(result, "<br>");        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
