@@ -1,5 +1,4 @@
 work/database/
-work/day4/ex02_static_http_server/node_modules
-work/day4/ex02_static_http_server/package-lock.json
-work/day4/ex04_fetch/node_modules
-work/day4/ex04_fetch/package-lock.json
+**/node_modules
+**/package-lock.json
+**/memo.txt
