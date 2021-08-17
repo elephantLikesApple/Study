@@ -1,0 +1,17 @@
+### test home
+GET http://localhost:8080/home
+
+### test about
+Get http://localhost:8080/about
+
+### test key home
+GET http://localhost:8080/home?apikey=qwer
+
+### test key about
+GET http://localhost:8080/about?apikey=qwer
+
+### test key welcome
+GET http://localhost:8080/home/welcome?apikey=qwer
+
+### test key about
+GET http://localhost:8080/blog?apikey=qwer

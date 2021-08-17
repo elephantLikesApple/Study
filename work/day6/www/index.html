@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="/api/v1/addUser">
+            <h3>전통방식의 폼</h3>
+            <div>
+                <lable for="name">name : </lable>
+                <input name="name" id="name">
+            </div>
+            <div>
+                <lable for="age">age : </lable>
+                <input name="age" id="age">
+            </div>
+            <button type="submit">제출하기</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <form method="POST" action="/api/v1/hello">
+            <h3>전통방식의 폼</h3>
+            <div>
+                <lable for="name">name : </lable>
+                <input name="name" id="name">
+            </div>
+            <div>
+                <lable for="age">age : </lable>
+                <input name="age" id="age">
+            </div>
+            <button type="submit">제출하기</button>
+        </form>
+    </div>
+    <hr>
+
+    <div>
+        <form id="ajax-form">
+            <h3>ajax</h3>
+            <div>
+                <lable for="name">name : </lable>
+                <input name="name" id="name">
+            </div>
+            <div>
+                <lable for="age">age : </lable>
+                <input name="age" id="age">
+            </div>
+            <button>제출하기</button>
+        </form>
+    </div>
+    <div id="result"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        document.querySelector('#ajax-form').addEventListener('click',async (evt)=> {
+            console.log(evt);
+            evt.preventDefault(); //리다이랙트 금지
+            let _form = document.querySelector('#ajax-form');
+
+            console.log(_form.name.value, _form.age.value);
+            let {status, data} = await axios.post('http://localhost:8080/api/v2/addUser',
+            {
+                name: _form.name.value,
+                age: parseInt(_form.age.value)
+            });
+            if(status == 200){
+                console.log(data);
+                let res_item = document.createElement('p');
+                res_item.innerText = `name: ${data.name} age : ${data.age}`
+                document.querySelector('#result').appendChild(res_item);
+            }
+        })
+    </script>
+</body>
+</html>
